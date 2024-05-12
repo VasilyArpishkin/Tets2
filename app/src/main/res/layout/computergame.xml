@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/placement"
+        android:text="Расставить корабли"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/GD2"
+        app:layout_constraintLeft_toRightOf="@id/GD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="200dp"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:text="Начать"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        app:layout_constraintLeft_toRightOf="@+id/placement"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        tools:ignore="MissingConstraints" />
+    <GridView
+        android:id="@+id/GD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="0dp"
+        android:verticalSpacing="-6dp"
+        android:numColumns="10"
+        android:columnWidth="25dp"
+        android:adjustViewBounds="true"
+        android:stretchMode="none"
+        android:listSelector="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/GD2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="40dp"
+        tools:ignore="MissingConstraints">
+    </GridView>
+
+    <GridView
+        android:id="@+id/GD2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="0dp"
+        android:verticalSpacing="-6dp"
+        android:numColumns="10"
+        android:columnWidth="25dp"
+        android:adjustViewBounds="true"
+        android:stretchMode="none"
+        android:listSelector="@null"
+        app:layout_constraintStart_toEndOf="@id/GD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        tools:ignore="MissingConstraints">
+    </GridView>
+    <TextView
+        android:id="@+id/T1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Твое поле"
+        app:layout_constraintBottom_toTopOf="@id/GD"
+        app:layout_constraintEnd_toEndOf="@+id/GD"
+        app:layout_constraintStart_toStartOf="@+id/GD"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/T2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="поле противника"
+        app:layout_constraintBottom_toTopOf="@id/GD2"
+        app:layout_constraintEnd_toEndOf="@+id/GD2"
+        app:layout_constraintStart_toStartOf="@+id/GD2"
+        android:layout_marginRight="95dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/message"
+        android:text="Нельзя ставить в этой области!"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
